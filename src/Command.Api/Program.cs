@@ -1,3 +1,5 @@
+using Assessments.Users.Application.Extensions;
+using Assessments.Users.Command.Api.Extensions;
 using Assessments.Users.Infrastructure;
 using Assessments.Users.Infrastructure.Extensions;
 using Microsoft.EntityFrameworkCore;
@@ -20,6 +22,12 @@ builder.Services.AddOpenApi();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer().AddSwaggerGen();
 
+// Add infrastructure services.
+builder.Services.AddInfrastructure();
+
+// Add application services.
+builder.Services.AddApplication();
+
 var app = builder.Build();
 
 app.MapDefaultEndpoints();
@@ -34,5 +42,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.MapUserApis();
 
 app.Run();
