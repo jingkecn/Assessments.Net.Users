@@ -1,0 +1,5 @@
+[*.{cs,vb}]
+# Allow underscores (_) in identifiers for test projects.
+dotnet_diagnostic.CA1707.severity = none
+# Code inspection (ReSharper): Class is never instantiated (non-private accessibility).
+resharper_class_never_instantiated_global_highlighting = none

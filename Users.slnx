@@ -27,7 +27,8 @@
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/ArchitectureTests/ArchitectureTests.csproj" />
-    <Project Path="tests/FunctionalTests/FunctionalTests.csproj" />
+    <Project Path="tests/FunctionalTests.Command.Api/FunctionalTests.Command.Api.csproj" />
+    <Project Path="tests/FunctionalTests.Query.Api/FunctionalTests.Query.Api.csproj" />
     <Project Path="tests/IntegrationTests/IntegrationTests.csproj" />
     <Project Path="tests/UnitTests/UnitTests.csproj" />
   </Folder>
